@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FSE</title>
+    {{ bootstrap.load_css() }}
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">FSE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/MarcosNBJ/fsefinal">GitHub</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Jumbotron containing simple information and dropdown-menu containing all brazillian states for the user to select-->
+    <div class="container mt-4">
+        <div class="jumbotron" style="text-align: center;">
+            <h1 class="display-4">Sample Text</h1>
+            <p class="lead">Sample Text</p>
+            <!-- <hr class="my-4">
+            <p>Se quiser separar por região basta clicar no botão abaixo</p> -->
+        </div>
+    </div>
+
+    {{ bootstrap.load_js() }}
+
+</body>
+
+</html>
