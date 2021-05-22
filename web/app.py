@@ -19,17 +19,17 @@ ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
 def recognize_image(path):
 
-        possible_classes = {'altura_maxima_permitida': 0, 'area_reservada_para_motos': 1, 'desvio_a_frente': 2,
-         'estreitamento_de_pista': 3, 'fiscalizacao_eletronica_horizontal_60_km': 4, 
-         'fiscalizacao_eletronica_vertical_50_km': 5, 'fiscalizacao_eletronica_vertical_60_km': 6, 
-         'lombada': 7, 'marcas_de_perigo': 8, 'pare': 9, 'passagem_sinalizada_de_escolares': 10, 
-         'passagem_sinalizada_de_pedestres': 11, 'placa_de_orientacao_de_destino': 12, 'ponto_de_onibus': 13, 
-         'proibido_estacionar': 14, 'proibido_parar_e_estacionar': 15, 'proibido_retornar_a_esquerda': 16, 
-         'proibido_trafego_de_caminhoes': 17, 'proibido_virar_a_direita': 18, 
-         'proibido_virar_a_direita_veiculos_pesados': 19, 'proibido_virar_a_esquerda': 20, 'rotatoria': 21, 
-         'rotatoria_a_frente': 22, 'semaforo_a_frente': 23, 'siga_em_frente': 24, 'siga_em_frente_ou_a_direita': 25,
-          'siga_em_frente_ou_a_esquerda': 26, 'velocidade_maxima_30_km': 27, 'velocidade_maxima_40_km': 28, 
-          'velocidade_maxima_50_km': 29, 'velocidade_maxima_60_km': 30, 'vire_a_direita': 31, 'vire_a_esquerda': 32}
+        possible_classes = {'altura maxima permitida': 0, 'area reservada para motos': 1, 'desvio a frente': 2,
+         'estreitamento de pista': 3, 'fiscalizacao eletronica horizontal 60 km': 4, 
+         'fiscalizacao eletronica vertical 50 km': 5, 'fiscalizacao eletronica vertical 60 km': 6, 
+         'lombada': 7, 'marcas de perigo': 8, 'pare': 9, 'passagem sinalizada de escolares': 10, 
+         'passagem sinalizada de pedestres': 11, 'placa de orientacao de destino': 12, 'ponto de onibus': 13, 
+         'proibido estacionar': 14, 'proibido parar e estacionar': 15, 'proibido retornar a esquerda': 16, 
+         'proibido trafego de caminhoes': 17, 'proibido virar a direita': 18, 
+         'proibido virar a direita veiculos pesados': 19, 'proibido virar a esquerda': 20, 'rotatoria': 21, 
+         'rotatoria a frente': 22, 'semaforo a frente': 23, 'siga em frente': 24, 'siga em frente ou a direita': 25,
+          'siga em frente ou a esquerda': 26, 'velocidade maxima 30 km': 27, 'velocidade maxima 40 km': 28, 
+          'velocidade maxima 50 km': 29, 'velocidade maxima 60 km': 30, 'vire a direita': 31, 'vire a esquerda': 32}
 
         model = tf.keras.models.load_model('saved_model/traffic_signs_model')
         uploaded_image = image.load_img(path, target_size = (64, 64))
