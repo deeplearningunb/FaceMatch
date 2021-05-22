@@ -7,6 +7,12 @@
 ## Sobre
 Este projeto constitui uma aplicação que utiliza uma rede neural convolucional para reconhecer placas de trânsito. Dessa forma, é possível fazer o upload da imagem de uma placa e visualizar o resultado do reconhecimento.
 
+
+## Resultados atuais e trabalhos futuros
+Atualmente a acertividade do modelo é de 92%, no entanto, ainda sim ele erra bastante quando a placa está em uma foto com muitos outros elementos de fundo. Isso se deve 
+principalmente ao fato do dataset utilizado não conter imagens variadas o suficiente. Então um próximo passo indicado seria aumentar o dataset para buscar melhorias no modelo
+
+
 ## Instalação 
 **Linguagem**: Python >= 3.8 <br>
 **Framework**: Flask  <br>
