@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FSE</title>
+    <title>Deep Learning</title>
     {{ bootstrap.load_css() }}
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">FSE</a>
+        <a class="navbar-brand" href="#">Deep Learning</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -22,25 +22,24 @@
                     <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/MarcosNBJ/fsefinal">GitHub</a>
+                    <a class="nav-link" href="https://github.com/deeplearningunb/TrafficSigns">GitHub</a>
                 </li>
             </ul>
         </div>
     </nav>
-    <!-- Jumbotron containing simple information and dropdown-menu containing all brazillian states for the user to select-->
     <div class="container mt-4">
         <div class="jumbotron" style="text-align: center;">
-            <h1 class="display-4">Sample Text</h1>
-            <p class="lead">Sample Text</p>
-            <!-- <hr class="my-4">
-            <p>Se quiser separar por região basta clicar no botão abaixo</p> -->
+            <h4 class="display-5">Para começar, seleciona a imagem de uma placa de trânsito </h4>
+            <p class="lead">Os formatos suportados são  png, jpg e jpeg</p>
+            <form action="upload_file" method="post" enctype="multipart/form-data">
+                <label class="btn btn-dark mt-2">
+                    Selecionar arquivo <input type="file" name="file" hidden>
+                </label>                
+                <button class="btn btn-success" type="submit">Analisar</button>
+            </form>
         </div>
     </div>
 
-    <form action="upload_file" method="post" enctype="multipart/form-data">
-        <input type="file" name="file">
-<button type="submit">A</button>
-    </form>
 
     {{ bootstrap.load_js() }}
 
