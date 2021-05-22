@@ -38,10 +38,18 @@
                 <button class="btn btn-success" type="submit">Analisar</button>
             </form>
         </div>
+
+        {% if result is defined %}
+        <div id="result" style="text-align: center;">
+            <h3>{{result}}</h3>
+            <img style="max-width: 400px;" src="{{url_for('static', filename='uploaded_images/'+filename)}}" />
+        </div>
+        {% endif %}
+    
+        {{ bootstrap.load_js() }}
+
     </div>
 
-
-    {{ bootstrap.load_js() }}
 
 </body>
 

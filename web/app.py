@@ -12,7 +12,7 @@ import os
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
 
-UPLOAD_FOLDER = './uploaded_images'
+UPLOAD_FOLDER = 'web/static/uploaded_images'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
@@ -51,7 +51,7 @@ def upload_file():
         path = os.path.join(app.config['UPLOAD_FOLDER'], file1.filename)
         file1.save(path)
         result = recognize_image(path)
-        return jsonify({"result": result})
+        return render_template('index.html', result=result, filename=file1.filename )
 
 
 @app.route('/')
